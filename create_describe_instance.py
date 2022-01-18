@@ -9,18 +9,8 @@ instances = ec2_resource.create_instances(
     MaxCount = 2,
     ImageId = ami_id,
     InstanceType = 't2.micro',
-    TagSpecifications=[
-        {
-            'ResourceType': 'instance',
-            'Tags': [
-                {
-                    'Key': 'Name',
-                    'Value': 'My-Server'
-                },
-            ]
-        },
-    ]
-)
+    TagSpecifications=[{'ResourceType': 'instance','Tags': [{'Key': 'Name','Value': 'My-Server'}]}]
+    )
 
 for instance in instances:
     print(f'EC2 instance "{instance.id}" has been launched')
