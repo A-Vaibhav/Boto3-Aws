@@ -6,9 +6,10 @@ ami_id = 'ami-041d6256ed0f2061c'
 
 instances = ec2_resource.create_instances(
     MinCount = 1,
-    MaxCount = 2,
+    MaxCount = 1,
     ImageId = ami_id,
-    InstanceType = 't2.micro'
+    InstanceType = 't2.micro',
+    TagSpecifications=[{'ResourceType': 'instance','Tags': [{'Key': 'Name','Value': 'My-Server'}]}]
     )
 
 for instance in instances:
