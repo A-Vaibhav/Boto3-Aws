@@ -15,7 +15,7 @@ snapshot = ec2_resource.create_snapshot(
         }
     ]
 )
-print(dir(snapshot))
+# print(dir(snapshot))
 snapshot.wait_until_completed()
 
 print(f"Snapshot {snapshot.id} created for volume {volume_id}")
