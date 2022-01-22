@@ -2,6 +2,8 @@ import boto3
 
 dynamo = boto3.resource('dynamodb')
 
+###### Create table in dynamoDB 
+
 table = dynamo.create_table(
     TableName = 'Json_data',
     KeySchema=[
