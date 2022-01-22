@@ -26,7 +26,7 @@ for instance in instances:
 
 response = sns_client.publish(
     TopicArn = 'arn:aws:sns:ap-south-1:861390422921:snaps',
-    Subject = 'EBS Snapshots', Message = str(snapshots_ids)
+    Subject = 'EBS Snapshots', Message = f"Created snapshots for {str(snapshots_ids)}"
 )
 
 print(response)
