@@ -26,3 +26,5 @@ print(f'Table status : {table.table_status} "{table.table_name}" Table ')
 table.wait_until_exists()
 
 print(f'Table status : CREATED "{table.table_name}" Table')
+
+

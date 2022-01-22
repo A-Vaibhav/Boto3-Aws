@@ -15,6 +15,4 @@ for bucket in buckets:
 
 
 for key,value in jsondict.items():
-    print(f'{key}:{value}')
-
-               
+    print(f'{key}: {value}')
