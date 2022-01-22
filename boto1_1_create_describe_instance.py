@@ -16,4 +16,4 @@ for instance in instances:
     print(f'EC2 instance "{instance.id}" has been launched')
 
     instance.wait_until_running()
-    print(f'EC2 instance "{instance.id}" has been started')
+    print(f'EC2 instance "{instance.id}" has been started successfully')
